@@ -26,35 +26,37 @@ with open(dataset_path, "r") as datafile:
         else:
             testset.append(dataValue) # => testset[column][row]
         rowIndex = rowIndex + 1
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#      dataset info:                                              #
-#   18 columns(0-17) (0-15: features, 16-17: decay coeficients)   #
-#   11934(0-11933) examples(samples)                              #
-#   0-5961:       trainingset[5968][18]     (slightly over 50%)   #
-#   5962-8942:    validationset[2983][18]                 (25%)   #
-#   8943-11933:   testset[2983][18]                      (25%)   #
-#                                                                 #
-#      Features as GT measures(in order):                         #
-#   0: Lever position (lp) [ ]                                    #
-#   1: Ship speed (v) [knots]                                     #
-#   2: Gas Turbine (GT) shaft torque (GTT) [kN m]                 #
-#   3: GT rate of revolutions (GTn) [rpm]                         #
-#   4: Gas Generator rate of revolutions (GGn) [rpm]              #
-#   5: Starboard Propeller Torque (Ts) [kN]                       #
-#   6: Port Propeller Torque (Tp) [kN]                            #
-#   7: Hight Pressure (HP) Turbine exit temperature (T48) [C]     #
-#   8: GT Compressor inlet air temperature (T1) [C]               #
-#   9: GT Compressor outlet air temperature (T2) [C]              #
-#   10: HP Turbine exit pressure (P48) [bar]                      #
-#   11: GT Compressor inlet air pressure (P1) [bar]               #
-#   12: GT Compressor outlet air pressure (P2) [bar]              #
-#   13: GT exhaust gas pressure (Pexh) [bar]                      #
-#   14: Turbine Injecton Control (TIC) [%]                        #
-#   15: Fuel flow (mf) [kg/s]                                     #
-#                                                                 #
-#     Decay coefficients(in order):                               #
-#  16: GT Compressor decay state coefficient                      #
-#  17: GT Turbine decay state coefficient                         #
-#                                                                 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#      dataset info:                                                    #
+#   18 columns(0-17) (0-15: features, 16-17: decay coeficients)         #
+#   11934(0-11933) examples(samples)                                    #
+#   0-5961:       trainingset[5968][18]           (slightly over 50%)   #
+#   5962-8942:    validationset[2983][18]                      (~25%)   #
+#   8943-11933:   testset[2983][18]                            (~25%)   #
+#                                                                       #
+#      Features as GT measures(in order):                               #
+#   0: Lever position (lp) [ ]                                          #
+#   1: Ship speed (v) [knots]                                           #
+#   2: Gas Turbine (GT) shaft torque (GTT) [kN m]                       #
+#   3: GT rate of revolutions (GTn) [rpm]                               #
+#   4: Gas Generator rate of revolutions (GGn) [rpm]                    #
+#   5: Starboard Propeller Torque (Ts) [kN]                             #
+#   6: Port Propeller Torque (Tp) [kN]                                  #
+#   7: Hight Pressure (HP) Turbine exit temperature (T48) [C]           #
+#   8: GT Compressor inlet air temperature (T1) [C]                     #
+#   9: GT Compressor outlet air temperature (T2) [C]                    #
+#   10: HP Turbine exit pressure (P48) [bar]                            #
+#   11: GT Compressor inlet air pressure (P1) [bar]                     #
+#   12: GT Compressor outlet air pressure (P2) [bar]                    #
+#   13: GT exhaust gas pressure (Pexh) [bar]                            #
+#   14: Turbine Injecton Control (TIC) [%]                              #
+#   15: Fuel flow (mf) [kg/s]                                           #
+#                                                                       #
+#     Decay coefficients(in order):                                     #
+#  16: GT Compressor decay state coefficient                            #
+#  17: GT Turbine decay state coefficient                               #
+#                                                                       #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Artificial Neural Network Implementation:
 

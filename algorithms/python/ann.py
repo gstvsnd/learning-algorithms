@@ -68,8 +68,3 @@ testset = testset.T
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Artificial Neural Network Implementation:
-
-fig, ax = plt.subplots()             # Create a figure containing a single Axes.
-ax.plot(trainingset[0],trainingset[16])  # Plot some data on the Axes.
-plt.show()                           # Show the figure.
-print(trainingset[0])

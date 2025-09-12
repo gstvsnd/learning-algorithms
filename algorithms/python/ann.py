@@ -28,20 +28,16 @@ with open(dataset_path, "r") as datafile:
             testset.append(dataValue) # => testset[column][row]
         rowIndex = rowIndex + 1
 # Transposes the matrices to achieve nicer data structures using numpy arrays: 
-# dataset[column][row] to dataset[row][column]
 trainingset = np.array(trainingset)
 validationset = np.array(validationset)
 testset = np.array(testset)
-trainingset = trainingset.T
-validationset = validationset.T
-testset = testset.T
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #      dataset info:                                                    #
 #   18 columns(0-17) (0-15: features, 16-17: decay coeficients)         #
 #   11934(0-11933) examples(samples)                                    #
-#   0-5961:       trainingset[18][5968]           (slightly over 50%)   #
-#   5962-8942:    validationset[18][2983]                      (~25%)   #
-#   8943-11933:   testset[18][2983]                            (~25%)   #
+#   0-5961:       trainingset[5968][18]           (slightly over 50%)   #
+#   5962-8942:    validationset[2983][18]                      (~25%)   #
+#   8943-11933:   testset[2983][18]                            (~25%)   #
 #                                                                       #
 #      Features as GT measures(in order):                               #
 #   0: Lever position (lp) [ ]                                          #
@@ -68,4 +64,3 @@ testset = testset.T
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Artificial Neural Network Implementation:
-
